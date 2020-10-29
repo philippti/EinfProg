@@ -6,7 +6,7 @@ import random
 
 turtle = tl.Turtle()
 turtle.screen.bgcolor("light blue")
-turtle.speed(20)
+turtle.speed(10)
 turtle.pensize(3)
 color = ["green", "blue", "red", "orange", "yellow", "black", "violet"]
 
@@ -51,7 +51,7 @@ def snowflakes():
     for i in range(15):
         snowflake2()
         turtle.penup()
-        turtle.goto(random.randint(-200, 200), random.randint(-200, 200))
+        turtle.goto(random.randint(-300, 300), random.randint(-300, 300))
         turtle.pendown()
 
 
