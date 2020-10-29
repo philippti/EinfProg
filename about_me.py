@@ -1,7 +1,9 @@
 from datetime import datetime
 
+# Save current time in variable date
 date = datetime.now()
 
+# Read input from User
 
 jahr = input("Wann bist du geboren? ")
 wohnort = input("Wo wohnst du? ")
@@ -10,6 +12,8 @@ essen = input("Was ist dein Lieblingsessen? ")
 getraenk = input("Was ist dein Lieblingsgetraenk? ")
 
 
+# Print out the input decorated with ASCII-Code
+# calculate the current age of the user
 
 print("† Du bist: " , int(date.year) - int(jahr))
 print("Du wohnst in: " , wohnort)
