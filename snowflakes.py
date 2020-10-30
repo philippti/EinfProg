@@ -6,7 +6,7 @@ import random
 
 turtle = tl.Turtle()
 turtle.screen.bgcolor("light blue")
-turtle.speed(10)
+turtle.speed(3)
 turtle.pensize(3)
 color = ["green", "blue", "red", "orange", "yellow", "black", "violet"]
 
@@ -14,45 +14,58 @@ color = ["green", "blue", "red", "orange", "yellow", "black", "violet"]
 
 def snowflake1():
 
-    for i in range(10):
+    i = 0
+    while i < 10:
         turtle.color(random.choice(color))
-        for i in range(2):
+        j = 0
+        while j < 2:
             turtle.forward(200)
             turtle.right(60)
             turtle.forward(200)
             turtle.right(120)
+            j = j + 1
         turtle.right(36)
+        i = i + 1
+
 
 # single branch for snowflake variant 2
 
 def branch():
-
-    for i in range(3):
-        for i in range(3):
+    i=0
+    while i < 3:
+        j=0
+        while j < 3:
             turtle.forward(30)
             turtle.backward(30)
             turtle.right(45)
+            j = j+1
         turtle.left(90)
         turtle.backward(30)
         turtle.left(45)
+        i = i + 1
     turtle.right(90)
     turtle.forward(90)
 
+
 # iterating 8 times over branch(), turning 45 degree everytime and changing color
 def snowflake2():
-    for i in range(8):
+    i=0
+    while i < 8:
         turtle.color(random.choice(color))
         branch()
         turtle.left(45)
+        i = i+1
 
 # draw a lot of snowflakes, changing position randomly
 def snowflakes():
 
-    for i in range(15):
+    i=0
+    while i < 15:
         snowflake2()
         turtle.penup()
         turtle.goto(random.randint(-300, 300), random.randint(-300, 300))
         turtle.pendown()
+        i = i+1
 
 
 # asking the user which variant of snowflake he wants to see drawn:
