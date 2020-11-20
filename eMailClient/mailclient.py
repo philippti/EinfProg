@@ -4,6 +4,9 @@
 # Make sure the working directory is set correctly, to access the textfile and the file you want to send
 # with the email 
 # 
+# This script can easily be used to send mails to a lot of people by using a csv file with the mail addresses and other data.
+# The password could #
+# 
 # author: philippti
 # created: 20.11.2020
 
@@ -15,7 +18,7 @@ from email.mime.text import MIMEText
 import os
 
 #set the working directory so python knows where the textfile and attatchment are stored
-os.chdir(r'D:\PycharmProjects\Vorlesung\EinfProg\eMailClient')
+os.chdir("PATH TO YOUR WORKING DIRECTORY")
 
 # open credential file with passwort, sender and reciever mail address from a file
 # store as tuple to access lines individualy
@@ -24,6 +27,7 @@ cred = tuple(open("infos.txt","r"))
 pwd = cred[0]
 sender = cred[1]
 reciever = cred[2]
+
 
 # create MIME Header to send
 message = MIMEMultipart()
