@@ -1,14 +1,22 @@
-# This small script will set up a secured SSL connection to a mail server and attach a file to it.
-# The passwort, sender mail and reciever mail address are stored in a text file and read by opening it
+# This small script will set up a secured SSL connection to a mail server, send an email and attach a file to it.
+# The passwort, sender mail and reciever mail address are stored in a textfile. They are read by opening it
 # and storing it as a tuple.
+# 
 # Make sure the working directory is set correctly, to access the textfile and the file you want to send
 # with the email 
 # 
-# This script can easily be used to send mails to a lot of people by using a csv file with the mail addresses and other data.
-# The password could #
+# This script can easily be used to send mails to a lot of people by using a csv file instead of a textfile with the mail addresses and other data.
+# to be sent with the mail.#
+# 
+# The password could be a input by the user and masked with asteriks by using the getpass() method from the stdiomask framework. 
 # 
 # author: philippti
 # created: 20.11.2020
+# 
+"""
+=======================================================================================================================================================================================
+"""
+
 
 import email, smtplib, ssl
 from email import encoders
