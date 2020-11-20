@@ -15,7 +15,7 @@ from email.mime.text import MIMEText
 import os
 
 #set the working directory so python knows where the textfile and attatchment are stored
-os.chdir(r'PATH TO YOUR WORKING DIRECTORY')
+os.chdir(r'D:\PycharmProjects\Vorlesung\EinfProg\eMailClient')
 
 # open credential file with passwort, sender and reciever mail address from a file
 # store as tuple to access lines individualy
